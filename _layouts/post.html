@@ -8,10 +8,11 @@ layout: layout
 
 
 <div id="gitmentContainer"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
 <script>
-var gitment = new Gitment({
+var gitalk = new Gitalk({
     owner: 'gehuiling',
     repo: 'gehuiling.github.io',
     oauth: {
@@ -19,5 +20,5 @@ var gitment = new Gitment({
         client_secret: 'b248255af16c1b29e7be11c373a824589fee68df',
     },
 });
-gitment.render('gitmentContainer');
+gitalk.render('gitmentContainer');
 </script>
