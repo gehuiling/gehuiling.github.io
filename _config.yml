@@ -76,7 +76,7 @@ plugins:
 # ---------------------------------------------------------------
 
 # Put your favicon.ico into `assets/` directory.
-favicon: /assets/images/favicon.ico
+favicon: /assets/images/favicon.png
 
 # Set default keywords (Use a comma to separate)
 keywords: "Jekyll, NexT, gehuiling, blog"
@@ -387,7 +387,7 @@ baidu_analytics:
 
 # Disqus
 disqus:
-  enable: true
+  enable: false
   shortname: sleepyggg
   count: true
   # hide comments (visitors need to click to load the comments)
@@ -442,12 +442,13 @@ changyan:
 
 # Support for gitalk comments system.
 gitalk:
-  enable: true
-  clientID:  93c84e712ae742f148c8
-  clientSecret: bfea7bcc1b55a3f4bc594a30929d4bec838f8daf
+  enable: false
+  clientID:  45d29430b0aa664a03a0
+  clientSecret: 44e3f3ef48bc6b33b4dbda697d9f8a37b9c7dd9b
   repo: gehuiling.github.io
   owner: gehuiling
   admin: gehuiling
+
 
 # Baidu Share
 # Available value:
@@ -550,7 +551,7 @@ busuanzi_count:
   # custom pv span for one page only
   page_pv: true
   page_pv_header: <i class="fa fa-file-o"></i>
-  page_pv_footer:
+  page_pv_footer: 
 
 
 # Tencent analytics ID

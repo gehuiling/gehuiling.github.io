@@ -5,20 +5,3 @@ layout: layout
 {% assign __ = site.data.languages[site.language] %}
 {% include post.html %}
 
-
-
-<div id="gitmentContainer"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-
-<script>
-var gitalk = new Gitalk({
-    owner: 'gehuiling',
-    repo: 'gehuiling.github.io',
-    oauth: {
-        client_id: '93c84e712ae742f148c8',
-        client_secret: 'bfea7bcc1b55a3f4bc594a30929d4bec838f8daf',
-    },
-});
-gitalk.render('gitmentContainer');
-</script>
