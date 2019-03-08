@@ -6,10 +6,8 @@ categories: [博客]
 tags: [Jekyll,Github]
 comments: true
 ---
-&#160;&#160;&#160;&#160;作为开篇博客的话，那就来讲讲如何利用Jekyll搭建个人博客的。（搭建虽说不太难，但......总要入一些坑啊/坏笑.jpg）
+&#160;&#160;&#160;&#160;作为开篇博客的话，那就来说说如何利用Jekyll搭建个人博客的。
   
-<!--more-->
-
 #### Jekyll介绍
 &#160;&#160;&#160;&#160;Jekyll 是一个静态站点生成器。它提供了内容管理系统（CMS）的一些优点，同时避免了数据库驱动站点引入的性能和安全问题。[Jekyll中文文档](http://jekyll.bootcss.com/)、[Jekyll英文文档](https://jekyllrb.com/)。
 *   &nbsp;通过Markdown（或者 Textile）以及 Liquid 转化成一个完整的可发布的静态网站
