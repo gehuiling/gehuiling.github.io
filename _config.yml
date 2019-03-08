@@ -392,7 +392,7 @@ disqus:
   count: true
   # hide comments (visitors need to click to load the comments)
   # count need to be false when hide is true
-  # hide: false
+  hide: false
 
 # <wildfire>
 wildfire:
@@ -442,12 +442,12 @@ changyan:
 
 # Support for gitalk comments system.
 gitalk:
-  enable: false
-  clientID: # 54730ddf7b9420460c03
-  clientSecret: # c05684701b25ff1c19ea0c01ce4d80c125e0707d
-  repo: # colingpt.github.io
-  owner: # colingpt
-  admin: # colingpt
+  enable: true
+  clientID:  93c84e712ae742f148c8
+  clientSecret: bfea7bcc1b55a3f4bc594a30929d4bec838f8daf
+  repo: gehuiling.github.io
+  owner: gehuiling
+  admin: gehuiling
 
 # Baidu Share
 # Available value:
@@ -754,4 +754,3 @@ version: 5.1.1
 reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
 wechatpay: /image/reward/wechat-reward-image.jpg
 alipay: /image/reward/alipay-reward-image.jpg
-
