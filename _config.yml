@@ -208,14 +208,16 @@ font:
 # ---------------------------------------------------------------
 # Sidebar Settings
 # ---------------------------------------------------------------
-
+#sidebar:
+#  display: always 
 
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
   GitHub: https://github.com/gehuiling
-  知乎: http://www.zhihu.com/people/yaoyit
+  掘金: https://juejin.im/
+  思否: https://segmentfault.com/
 
 
 # Social Links Icons
@@ -230,6 +232,9 @@ social_icons:
   GitHub: github
   Twitter: twitter
   Weibo: weibo
+  掘金: angle-double-down
+  思否: envelope
+
 
 
 # Sidebar Avatar
@@ -265,7 +270,7 @@ sidebar:
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggle.
-  display: hide
+  display: always
   #display: always
   #display: hide
   #display: remove
@@ -278,7 +283,7 @@ sidebar:
   b2t: false
 
   # Scroll percent label in b2t button
-  scrollpercent: false
+  scrollpercent: true
 
 
 # Blog rolls
@@ -382,7 +387,7 @@ baidu_analytics: 70b7e141dfc0ea2b204682f94ab2e01a
 # Disqus
 disqus:
   enable: true
-  shortname: simpleyyt
+  shortname: gee
   count: true
   # hide comments (visitors need to click to load the comments)
   # count need to be false when hide is true
