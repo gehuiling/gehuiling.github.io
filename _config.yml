@@ -216,8 +216,8 @@ font:
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
   GitHub: https://github.com/gehuiling
-  掘金: https://juejin.im/
-  思否: https://segmentfault.com/
+  掘金: https://juejin.im/user/5c36d18b6fb9a049ff4e52aa
+  SegmentFault: https://segmentfault.com/u/sleepygee
   #Email: geehuiling@outlook.com
 
 
@@ -235,7 +235,7 @@ social_icons:
   Twitter: twitter
   Weibo: weibo
   掘金: angle-double-down
-  思否: question-circle #
+  SegmentFault: question-circle #
   #Email: envelope
 
 # Sidebar Avatar
