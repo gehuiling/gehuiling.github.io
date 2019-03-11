@@ -2,7 +2,7 @@
 layout: post
 title:  "Windows环境下 Jekyll + Github 搭建个人博客"
 date:   2018-12-15 04:09:00
-categories: [博客]
+categories: [经验分享]
 tags: [Jekyll,Github]
 comments: true
 # photos: 
