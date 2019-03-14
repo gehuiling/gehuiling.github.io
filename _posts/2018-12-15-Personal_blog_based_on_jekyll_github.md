@@ -2,7 +2,7 @@
 layout: post
 title:  "Windows环境下 Jekyll + Github 搭建个人博客"
 date:   2018-12-15 04:09:00
-categories: [经验分享]
+categories: [博客]
 tags: [Jekyll,Github]
 comments: true
 # photos: 
@@ -11,7 +11,7 @@ comments: true
 萌新来说说Windows环境下 Jekyll + Github 搭建个人博客，非常简单。
 <!--more-->
 
-# Jekyll介绍
+## Jekyll介绍
 
 Jekyll 是一个静态站点生成器。它提供了内容管理系统（CMS）的一些优点，同时避免了数据库驱动站点引入的性能和安全问题。[（Jekyll中文文档](http://jekyll.bootcss.com/)、[Jekyll英文文档）](https://jekyllrb.com/)。
 *   &nbsp;通过Markdown（或者 Textile）以及 Liquid 转化成一个完整的可发布的静态网站
@@ -19,7 +19,7 @@ Jekyll 是一个静态站点生成器。它提供了内容管理系统（CMS）�
 *   &nbsp;无需数据库
 *   &nbsp;扩展评论、分享等功能
 
-# 环境配置
+## 环境配置
 
 **1.&nbsp;&nbsp;注册Github账号并创建仓库**  **[^1]**
 
@@ -57,7 +57,7 @@ $ jekyll serve
 
 ![]({{ site.url }}/image/posts/blog1initialBlog.png)
 
-# 目录结构
+## 目录结构
 　
 Jekyll 的核心其实是一个文本转换引擎。它的概念其实就是： 你用你最喜欢的标记语言来写文章，可以是 Markdown，也可以是 Textile,或者就是简单的 HTML, 然后 Jekyll 就会帮你套入一个或一系列的布局中。在整个过程中你可以设置URL路径, 你的文本在布局中的显示样式等等。这些都可以通过纯文本编辑来实现，最终生成的静态页面就是你的成品了。
 
@@ -93,7 +93,7 @@ Jekyll 的核心其实是一个文本转换引擎。它的概念其实就是： 
 
 到此，博客初步搭建就完成啦。
 
-# 建立Github Page 
+## 建立Github Page 
 
 有两种方法：一种是自己学习 Jekyll 和前端知识部署独一无二的博客，而对于我们大多数人来说套用模版搭建模版会容易的多，所以我以  **套用模板** 讲解：
 
@@ -126,7 +126,7 @@ $  git push -u origin master
 
 *   &nbsp;**在浏览器地址中输入你刚新建的github仓库名 yourname.github.io ，跳转到和刚选择模版同样的站点网页。OK，和模板一样的属于自己的博客搭建完成！**
 
-# 自定义博客样式
+## 自定义博客样式
 
 *   &nbsp;**模板博客里面的信息并不是所要的，我们现在需要进行修改，使其真正称为自己的个性化博客**
 
@@ -173,7 +173,7 @@ comments: true
 OK，现在你拥有自己的博客啦！
 
 
-# TIPS
+## TIPS
 *   &nbsp;**开启本地实时预览修改内容**
 
 每次修改与更新博客的内容就 push 一次的话比较麻烦，而且有些修改在 push 到仓库之后然后显示可能不太理想，这时候还要继续修改。这时候，打开windows系统命令行，输入以下代码：
