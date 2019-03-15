@@ -55,7 +55,7 @@ $ jekyll serve
 
 浏览器里输入： [**http://localhost:4000**](http://localhost:4000) ，就可以看到默认的博客页面。
 
-![]({{ site.url }}/image/posts/blog1initialBlog.png)
+<img src="/image/posts/blog1initialBlog.png" style="display:block;margin:0 auto;">
 
 ## 目录结构
 　
@@ -132,8 +132,7 @@ $  git push -u origin master
 
 使用编辑器打开本地仓库中的 _config.yml 文件，按照里面的注释修改为自己的内容。我选用的是Next主题：
 
-![]({{ site.url }}/image/posts/blog1Next.jpg)
-
+<img src="/image/posts/blog1Next.jpg" style="display:block;margin:0 auto;">
 
 *   &nbsp;**新建文章**
 

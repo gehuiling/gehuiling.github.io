@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "谈谈盒模型"
+title:  "盒模型"
 date:   2019-01-12 11:41:10
-categories: [CSS]
+categories: [CSS知识点]
 tags: [CSS,盒模型]
 comments: true
 ---
@@ -15,11 +15,11 @@ comments: true
 
 以下图的头像图片为例：
 
-![author1]({{ site.url }}/image/posts/blog4author1.png)
+<img src="/image/posts/blog4author1.png" style="display:block;margin:0 auto;">
 
 在chrome浏览器中查看这个元素，结果是这样的：
 
-![author1]({{ site.url }}/image/posts/blog4author2.png)
+<img src="/image/posts/blog4author2.png" style="display:block;margin:0 auto;">
 
 蓝色部分（1920 x 162）是content（内容），绿色是padding（内边距），黄色是border（边框）, 深黄色是margin（外边距）。
 
@@ -33,7 +33,7 @@ CSS盒模型本质上是一个盒子封装HTML元素，它包括边距、边框�
 	* padding(内边距)：清除内容周围的区域，内边距是透明的
 	* content(内容)：盒子的内容，显示文本和图像
 
-![W3C_box]({{ site.url }}/image/posts/blog4w3cbox.png)
+<img src="/image/posts/blog4w3cbox.png" style="display:block;margin:0 auto;">
 
 图中最内部的框是元素的实际内容，也就是元素框，紧挨着元素框外部的是内边距（padding），其次是边框（border），然后最外层是外边距（margin），整个构成了框模型。通常我们设置的背景显示区域，就是内容、内边距、边框这一块范围。而外边距 margin是透明的，不会遮挡周边的其他元素。
 
@@ -63,7 +63,7 @@ div内容占大小：
 
 * **怪异盒模型**：IE的盒子模型，指定CSS元素的height与width，设置的是内容区域+内边距的高度与宽度，即width已经包含了padding和border值）
 
-![W3C_box]({{ site.url }}/image/posts/blog4iebox.png)
+<img src="/image/posts/blog4iebox.png" style="display:block;margin:0 auto;">
 
 IE模型中：CSS中的宽（width）=内容（content）的宽 + border（左右） + padding（左右），
 　　　　　CSS中的高（height）=内容（content）的高 + border（上下） + padding（上下）

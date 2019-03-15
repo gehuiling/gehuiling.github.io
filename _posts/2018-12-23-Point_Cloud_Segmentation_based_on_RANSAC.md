@@ -41,7 +41,7 @@ comments: true
 
 CloudCompare是一款三维点云处理软件(例如那些用激光扫描仪获得的),它还可以处理三角网格和校准图像。CloudCompare提供了一组基本工具，用于手工编辑和渲染3D点云和三角形网格。它还提供了各种先进的处理算法，其中包括投影、配准、距离计算、统计计算、分割、几何特征计算等。所以，在实验之前利用CloudCompare加载原始数据进行观察，indoor点云数据的可视化结果:
 
-![indoor_点云可视化]({{ site.url }}/image/posts/blog2indoor.png)
+<img src="/image/posts/blog2indoor.png" style="display:block;margin:0 auto;">
 
 #### 数据转换：
 
@@ -76,10 +76,9 @@ sor.setInputCloud (cloud);                //设置需要过滤的点云给滤波
 sor.setLeafSize (0.06f, 0.06f, 0.06f);    //设置滤波时创建的体素体积为1cm的立方体
 sor.filter (*cloud_filtered);             //执行滤波处理，存储输出
 ```
+<img src="/image/posts/blog2afterfilter.png" style="display:block;margin:0 auto;">
 
-![滤波后的点云]({{ site.url }}/image/posts/blog2afterfilter.png)
-
-![滤波前后对比]({{ site.url }}/image/posts/blog2compare.png)
+<img src="/image/posts/blog2compare.png" style="display:block;margin:0 auto;">
 
 对比可以看出：滤波之后，点的密度大小和整齐程度与之前有所差异，虽然处理后数据量大大减少，但其所含有的形状特征与空间结构信息与原始点云差不多，这为后续的点云分割提供了便捷。
 
@@ -118,11 +117,11 @@ seg.setDistanceThreshold(0.2);           //设置距离阈值
 
 在本实验的参数设置下，利用RANSAC方法分割得到总共7个平面：
 
-![分割结果]({{ site.url }}/image/posts/blog2filterresult.png)
+<img src="/image/posts/blog2filterresult.png" style="display:block;margin:0 auto;">
 
 将分割得到的各平面.pcd文件在CloudCompare软件中进行可视化，不同的面设置不同的颜色来进行区分，不同视角的观察结果如图:
 
-![分割结果可视化]({{ site.url }}/image/posts/blog2result.png)
+<img src="/image/posts/blog2result.png" style="display:block;margin:0 auto;">
 
 从效果来看，采用RANSAC算法提取的平面整体效果还可以。RANSAC的优点是它能鲁棒的估计模型参数，例如，它能从包含大量局外点的数据集中估计出高精度的参数。RANSAC的缺点是它计算参数的迭代次数没有上限；如果设置迭代次数的上限，得到的结果可能不是最优的结果，甚至可能得到错误的结果。RANSAC只有一定的概率得到可信的模型，概率与迭代次数成正比。RANSAC的另一个缺点是它要求设置跟问题相关的阀值，设置较合适的阈值这往往并不是非常简单的。
 
