@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "老生常谈之CSS水平 | 垂直居中"
+title:  "CSS知识点（二）元素居中"
 date:   2019-01-16 08:54:12
-categories: [CSS]
+categories: [CSS知识点]
 tags: [CSS,元素布局]
 comments: true
 ---
