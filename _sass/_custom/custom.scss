@@ -1,1 +1,24 @@
 // Custom styles.
+.site-author-image {
+    display: block;
+    margin: 0 auto;
+    padding: $site-author-image-padding;
+    max-width: $site-author-image-width;
+    height: $site-author-image-height;
+    border: $site-author-image-border-width solid $site-author-image-border-color;
+    
+    /* 头像圆形 */
+    border-radius: 80px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    box-shadow: inset 0 -1px 0 333sf;
+}
+
+// body{
+//     // background:url(https://images8.alphacoders.com/929/929202.jpg);
+//     background:url(/image/posts/1.jpeg);
+//     background-size:cover;
+//     background-repeat:no-repeat;
+//     background-attachment:fixed;
+//     background-position:center;
+// }
