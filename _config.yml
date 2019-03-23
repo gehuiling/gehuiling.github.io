@@ -93,7 +93,7 @@ since: 2018
 authoricon: heart
 
 # Footer `powered-by` and `theme-info` copyright
-copyright: true
+# copyright: true
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -264,7 +264,7 @@ toc:
 sidebar:
   # Sidebar Position, available value: left | right
   position: left
-  #position: right
+  # position: right
 
   # Sidebar Display, available value:
   #  - post    expand on posts automatically. Default.
@@ -429,8 +429,8 @@ wildfire:
 # changyan
 changyan:
   enable: false
-  appid:
-  appkey:
+  # appid: cyu98D0Nv
+  # appkey: da68b3dc70af88464bcf0590e495cfd0
 
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
@@ -442,10 +442,10 @@ changyan:
 
 # Support for gitalk comments system.
 gitalk:
-  enable: false
-  clientID:  45d29430b0aa664a03a0
-  clientSecret: 44e3f3ef48bc6b33b4dbda697d9f8a37b9c7dd9b
-  repo: gehuiling.github.io
+  enable: true
+  clientID:  dcb03672ffd3010d186e
+  clientSecret: da53bd5f153c9bd483e6823b8ff8621b9a70e934
+  repo: https://gehuiling.github.io/
   owner: gehuiling
   admin: gehuiling
 
@@ -458,12 +458,12 @@ gitalk:
 ##  type: button
 
 # Share
-#jiathis:
+jiathis: true
 # Warning: JiaThis does not support https.
 #add_this_id:
 
 # Share
-#duoshuo_share: true
+duoshuo_share: false
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
@@ -562,7 +562,7 @@ busuanzi_count:
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+baidu_push: true
 
 # Google Calendar
 # Share your recent schedule to others via calendar page
@@ -619,7 +619,7 @@ use_motion: true
 fancybox: true
 
 # Progress bar in the top during page loading.
-pace: false
+pace: true
 # Themes list:
 #pace-theme-big-counter
 #pace-theme-bounce
@@ -630,7 +630,7 @@ pace: false
 #pace-theme-center-simple
 #pace-theme-corner-indicator
 #pace-theme-fill-left
-#pace-theme-flash
+#pace-theme-
 #pace-theme-loading-bar
 #pace-theme-mac-osx
 #pace-theme-minimal
