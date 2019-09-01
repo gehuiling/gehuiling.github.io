@@ -2,8 +2,8 @@
 layout: post
 title:  "伪类和伪元素"
 date:   2019-03-22 09:33:00
-categories: [CSS知识点]
-tags: [CSS]
+categories: [CSS]
+tags: [CSS,伪类,伪元素]
 comments: true
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "CSS知识点（一）盒模型"
 date:   2019-01-12 11:41:10
-categories: [CSS知识点]
+categories: [CSS]
 tags: [CSS,盒模型]
 comments: true
 ---
@@ -44,7 +44,7 @@ CSS盒模型本质上是一个盒子封装HTML元素，它包括边距、边框�
 `元素框的总高度 = height + padding（上下）+ border（上下） + margin（上下）`
 
 举个例子：
-```  
+```html  
 <div style="width:50px;height:50px;padding:2px;border:1px solid blue;margin:3px;">W3C模型</div>
 ```  
 
@@ -75,7 +75,7 @@ IE模型中：CSS中的宽（width）=内容（content）的宽 + border（左�
 *注：background设置的是content+padding的背景色。*
 
 举个例子：
-```  
+```html
 <div style="width:50px;height:50px;padding:2px;border:1px solid blue;margin:3px;">W3C模型</div>
 ```
 
@@ -107,7 +107,7 @@ CSS盒模型和IE盒模型的区别：
 按理说，我们应该遵循w3c标准使用标准盒模型，但情况并不都是如此，看下面的例子。
 
 ## CSS3指定盒子模型种类
-``` 
+```css 
 box-sizing: content-box; /* 标准盒模型 */ 
 box-sizing: border-box;  /* IE盒模型 */
 ``` 

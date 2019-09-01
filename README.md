@@ -1,5 +1,1 @@
-# NexT
-
-> 精于心，简于形
-
-NexT 是由 [Hexo NexT](https://github.com/iissnan/hexo-theme-next) 移植而来的 Jekyll 主题。
+ 这是我的[个人博客](https://gehuiling.github.io/)，记录知识供日常查阅。

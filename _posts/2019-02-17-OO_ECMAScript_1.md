@@ -2,8 +2,8 @@
 layout: post
 title:  "ECMAScript面向对象编程（一）创建对象(ES6之前)"
 date:   2019-02-17 21:15:02
-categories: [JS知识点]
-tags: [javascript]
+categories: [JavaScript]
+tags: [JavaScript]
 comments: true
 ---
 
@@ -14,7 +14,7 @@ comments: true
 
 ## Object构造函数
 
-```
+```javascript
 var person = new Object();
 person.name = "gee";
 person.age = 18;
@@ -26,7 +26,7 @@ person.sayName = function(){
 ```
 
 ## 对象字面量
-```
+```javascript
 var person = {
     name: "gee",
     age: 18,
@@ -42,7 +42,7 @@ var person = {
 虽然 Object 构造函数或对象字面量都可以用来创建单个对象，它们有个明显的缺点：使用同一个接口创建很多对象，会产生大量重复的代码。
 
 工厂模式是软件工程领域的一种设计模式，这种模式抽象了创建具体对象的过程。考虑到ECMAScript中无法创建类，开发人员就发明了一种函数，用函数来封装以特定接口创建对象的细节。
-```
+```javascript
 function createPerson(name,age,job){
     var o = new Object();
     o.name = name;
@@ -66,7 +66,7 @@ var person2 = createPerson("bbb",18,"teacher");
 
 像Object、Array这样的原生构造函数在运行时会自动出现在执行环境中。也可以创建自定义的构造函数，然后定义自定义对象类型的属性和方法。
 
-```
+```javascript
 function Person(name,age,job){
     this.name = name;
     this.age = age;
@@ -97,14 +97,14 @@ Person()函数取代了createPerson()函数，Person()中的代码除了与creat
 
 在这里，person1 和 person2 这两个实例对象都有一个 `constructor`（构造函数）属性，指向 Person:
 
-```
+```javascript
 console.log(person1.constructor == Person); // true
 console.log(person2.constructor == Person); // true
 ```
 
 对象的 constructor 属性最初是用来标识对象类型的，但是，检测对象类型用 `instanceof` 操作符更加可靠一些。
 
-```
+```javascript
 console.log(person1 instanceof Person); // true
 console.log(person1 instanceof Object); // true
 console.log(person2 instanceof Person); // true
@@ -115,12 +115,12 @@ console.log(person2 instanceof Object); // true
 
 **使用构造函数的主要问题：每个方法都要在每个实例上重新创建一次。** 上面的例子可以证明这一点：
 
-```
+```javascript
 console.log(person1.sayName == person2.sayName); // false
 ```
 所以说，每个实例中的方法是不同的。创建两个完成同样任务的 function 完全没有必要，而且还有 `this` 对象在，前面的代码其实是在执行代码前就把函数绑定到特定的对象上了。所以，是不是可以向下面这样把函数定义丢到构造函数外面？就像这样：
 
-```
+```javascript
 function Person(name,age,job){
     this.name = name;
     this,age = age;
@@ -144,7 +144,7 @@ var person2 = new Person("bbb",18,"teacher");
 
 不在构造函数定义对象实例的信息，而是将其直接添加到原型对象中：
 
-```
+```javascript
 function Person(){
 }
 
@@ -181,7 +181,8 @@ console.log(person1.sayName == person2.sayName);  // true
 `Person.prototype 指向原型，Person.prototype.constructor指向Person，实例对象person1和person2都包含一个内部属性，指向Person.prototype。`
 
 可以使用 `isPrototypeOf()` 和 `Object.getPrototypeOf()` 确定实例与原型之间的关系：
-```
+
+```javascript
 console.log(Person.prototype.isPrototypeOf(person1));  // true
 console.log(Person.prototype.isPrototypeOf(person2));  // true
 
@@ -197,7 +198,7 @@ console.log(Object.getPrototypeOf(person1) .name);  // 'gee'
 
 前面的例子没添加一个属性或方法都要写一遍Person.prototype，更常见的写法是用一个包含所有属性和方法的对象字面量来重写整个原型对象。
 
-```
+```javascript
 function Person(){
 }
 
@@ -213,7 +214,7 @@ Person.prototype = {
 
 表面看起来好像跟改写前没什么变化，看下面：
 
-```
+```javascript
 var person3 = new Person();
 console.log(person3.constructor == Person);  // false
 ```
@@ -224,7 +225,7 @@ console.log(person3.constructor == Person);  // false
 
 如果constructor属性很重要，可以向下面这样特意将其设置回适当的值：
 
-```
+```javascript
 function Person(){
 }
 
@@ -245,7 +246,7 @@ Person.prototype = {
 * **给原型对象添加属性/方法**
 
 首先看这段代码：
-```
+```javascript
 function Person(){
 }
 
@@ -262,7 +263,7 @@ person3.sayName();  // "gee" （正常输出）
 
 如果在为原型对象添加属性之前就创建了实例：
 
-```
+```javascript
 function Person(){
 }
 
@@ -287,7 +288,7 @@ person3.sayName();  // "gee" （正常输出）
 * **重写原型对象**
 
 首先看这段代码：
-```
+```javascript
 function Person(){
 }
 
@@ -309,7 +310,7 @@ person3.sayName();  //"gee"(没有问题，正常输出)
 <img src="/image/posts/blog73.png" style="display:block;margin:0 auto;">
 
 如果在重写原型之前就创建了实例：
-```
+```javascript
 function Person(){
 }
 
@@ -343,7 +344,7 @@ person3.sayName();  //"Uncaught TypeError: person3.sayName is not a function"(�
 * 省略了为构造函数传递初始化参数这一环节，所以所有实例在默认情况下都取得相同的属性值；
 * 原型模式最大的问题是由共享的本性导致的，对于共享的引用类型的属性来说，问题就暴露出来了。
 
-```
+```javascript
 function Person(){
 }
 
@@ -376,7 +377,7 @@ console.log(person2.friends); // ["aa", "bb", "cc"]
 
 构造函数用于定义实例属性，原型模式用于定义方法和共享的属性。这种构造方法是ECMAScript中使用最广泛、认同度最高的一种创建自定义类型的方法。
 
-```
+```javascript
 function Person(name,age,job){
     this.name=name;
     this.age = age;
@@ -403,7 +404,7 @@ console.log(person2.friends); // ["aa", "bb"]
 
 动态原型模式将构造函数和原型对象等所有信息都封装在构造函数中，在有必要的情况下才初始化原型。也就是说通过检查某个应该存在的方法是否有效，来决定是否需要初始化原型。
 
-```
+```javascript
 function Person(name,age,job){
     this.name=name;
     this.age = age;
@@ -426,7 +427,7 @@ person1.sayName(); // "gee"
 
 基本思想是创建一个函数，该函数的作用仅仅是封装对象的代码，然后返回新创建的对象。表面上看很像经典的构造函数，可又感觉像工厂模式：
 
-```
+```javascript
 function Person(name,age,job){
     var o =new Object();
     o.name=name;
@@ -446,7 +447,7 @@ person1.sayName(); // "gee"
 ## 稳妥构造函数模式
 
 与计生构造函数模式类似，但是有两点不同：创建对象的实例方法不引用this；不使用new操作符调用构造函数。
-```
+```javascript
 function Person(name,age,job){
     var o = new Object();
 
@@ -465,7 +466,3 @@ person1.sayName(); // "gee"
 ```
 
 变量person1保存的是一个稳妥对象，除了调用sayName（）函数外，没有其他的方法可以访问其数据成员。即使有其他代码会给这个对象添加方法或者数据成员，但也不可能有别的方法访问传入到构造函数中的原始数据。稳妥构造函数的这种安全性，使得它非常适合在某些安全执行环境。
-
-
-
-

@@ -2,8 +2,8 @@
 layout: post
 title:  "ECMAScript面向对象编程（二）继承(ES6之前)"
 date:   2019-03-20 18:05:12
-categories: [JS知识点]
-tags: [javascript]
+categories: [JavaScript]
+tags: [JavaScript]
 comments: true
 ---
 es6之前，ECMAScript本质上不能算是一门面向对象的语言。它引入了原型（prototype），以另一种方式模仿类，并且通过原型链的方式实现父类与子类之间共享属性的继承。
@@ -16,7 +16,7 @@ es6之前，ECMAScript本质上不能算是一门面向对象的语言。它引�
 
 本质是将父类的一个实例赋值给子类的原型对象
 
-```
+```javascript
 function SuperType(){
     this.pro = true;
 }
@@ -43,7 +43,7 @@ console.log(subinstance.getSubValue());  // false
 
 **缺点：** 原型链实现继承最主要问题还是前篇博客提及的引用类型值，即**引用类型值的原型属性会被所有实例所共享**，这也是为什么不在原型中而是在构造函数中定义属性的原因。在通过原型链继承时候，原型实际上就是变成了另一个类型的实例，原先的实例属性（也就是在父类的构造函数中定义的属性）就会成为现在的原型的属性，如果该属性是引用类型值，那就出现前面所说的问题了。
 
-```
+```javascript
 function SuperType(){
     this.color = ["red","green"];
 }
@@ -70,7 +70,7 @@ console.log(inst2.color);  // "red", "green", "black"
 
 思想很简单：在子类型构造函数内部调用父类型构造函数。
 
-```
+```javascript
 function SuperType(name){
     this.name = name;
     this.color = ["red","green"];
@@ -103,7 +103,7 @@ inst1.getName();// 报错
 
 ## 组合继承
 
-```
+```javascript
 function SuperType(name){
     this.name = name;
     this.color = ["red","green"];
@@ -149,7 +149,7 @@ inst2.sayAge();    // 17
 
 这是目前es5中主流的继承方式，开发人员普遍认为这是引用类型最理想的基础方式。其实可以将继承分为两步：构造函数属性继承和建立子类和父类原型的链接。不必为了指定子类型的原型而调用父类型的构造函数，所需要的无非就是父类型的原型的一个副本而已，那么就可以创建父类型原型的副本：
 
-```
+```javascript
 function SuperType(name){
     this.name = name;
     this.color = ["red","green"];

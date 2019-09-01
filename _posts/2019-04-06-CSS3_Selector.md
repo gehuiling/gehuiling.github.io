@@ -2,8 +2,8 @@
 layout: post
 title:  "CSS3选择器"
 date:   2019-04-06 12:45:12
-categories: [CSS知识点]
-tags: [CSS]
+categories: [CSS]
+tags: [CSS,选择器]
 comments: true
 ---
 
@@ -52,12 +52,12 @@ E:target | 选择匹配E的所有元素，且匹配元素被相关URL指向
 #### 语言伪类选择器
 
 使用语言伪类选择器来匹配使用语言的元素，特别是对于多语言版本的网站，根据不同语言版本设置页面的字体风格。HTML5中有两种方法设置文档的语言：
-```
+```html
 <!DOCTYPE HTML>
 <html lang="en-US">
 ```
 或者
-```
+```html
 <body lang="fr">
 ```
 
@@ -65,7 +65,7 @@ E:target | 选择匹配E的所有元素，且匹配元素被相关URL指向
 -------|--------
 E:lang(language) | 选择匹配E的所有元素，且匹配元素指定了lang属性，且其值为language
 
-```
+```css
 :lang(en) p {background:red}  <!--设置英文（en-US）版本的p段落样式-->
 ```
 
@@ -98,7 +98,7 @@ E:empty | 选择没有子元素的元素，而且该元素也不包含任何文�
 
 ***注：:`nth-child ` 和  `nth-of-type` 的区别***
 
-```
+```html
 <div class="post">
    <p>para1</p>
    <p>para2</p>
@@ -115,7 +115,7 @@ E:empty | 选择没有子元素的元素，而且该元素也不包含任何文�
 
 看下面的对比例子，就可以马上清晰了。把上面的HTML结构改变一下：
 
-```
+```html
 <div>
     <h1>h1</h1>
     <p>para1</p>
@@ -133,7 +133,7 @@ E:empty | 选择没有子元素的元素，而且该元素也不包含任何文�
 
 那如果再改一下HTML结构：
 
-```
+```html
 <div>
     <h1>h1</h1>
     <h2>h2</h1>

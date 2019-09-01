@@ -2,8 +2,8 @@
 layout: post
 title:  "CSS知识点（二）元素居中"
 date:   2019-01-16 08:54:12
-categories: [CSS知识点]
-tags: [CSS,元素布局]
+categories: [CSS]
+tags: [CSS,布局]
 comments: true
 ---
 
@@ -11,12 +11,12 @@ comments: true
 <!--more-->
 
 **本文所有演示方法中，当居中元素为块状元素时，共用以下HTML结构代码：**
-``` 
+```html 
 <div class="parent"><div class="child"></div></div>
 ``` 
 
 **共用以下CSS样式：**
-```
+```css
 .parent {
     background: rgb(203, 245, 154);
     width: 300px;
@@ -34,7 +34,7 @@ comments: true
 
 * **CSS3 transform**
 
-```
+```css
 .parent {
     position: relative;
 }
@@ -47,7 +47,7 @@ comments: true
 
 * **Flex布局**
 
-```
+```css
 .parent {
     display: flex;
     justify-content: center;
@@ -64,13 +64,13 @@ comments: true
 
 常见的内联元素有：span, a, img, input, label 等等
 
-``` 
+```html 
 <div class="parent"><span class="child">child-center</span></div>
 ``` 
 
 设置其父元素的`text-align`属性值为`center`，可实现水平居中：
 
-``` 
+```css 
 .parent {
     text-align:center;
 }
@@ -87,7 +87,7 @@ comments: true
 
  * **设置margin**
 
- ```
+ ```css
  .child {
      width: 100px;
      height: 100px;
@@ -98,7 +98,7 @@ comments: true
 
 * **display：inline-block**
 
-```
+```css
 .parent {
     text-align:center;
 }
@@ -115,7 +115,7 @@ comments: true
 
 绝对定位的子元素left设为50%，只能将元素的左顶点置于父元素的水平中央。但由于元素自身存在宽度和高度，为了使元素整体在父元素中水平垂直居中，需要对元素自身进行移动。
 
-``` 
+```css
 .parent {
     position: relative; 
 } 
@@ -139,7 +139,7 @@ comments: true
 
 * **方法二：margin-0 auto**
 
-``` 
+```css 
 .parent {
     position: relative;
 }
@@ -164,7 +164,7 @@ comments: true
 
 * **CSS3 transform**
 
-```
+```css
 .parent {
     position: relative;
 }
@@ -177,7 +177,7 @@ comments: true
 
 * **Flex布局**
 
-```
+```css
 .parent {
     display: flex;
     align-items: center;
@@ -190,13 +190,13 @@ comments: true
 
 #### 居中元素为单行文本
 
-```
+```html
 <div class="parent"><sapn class="child">center_child</sapn></div>
 ```
 
 父元素已知高度，把子元素的 line-height 设为 父元素的高度，适用于只有一行文字的情况。
 
-```
+```css
 .child {
     line-height: 300px; 	
 }
@@ -212,7 +212,7 @@ comments: true
 
 绝对定位的子元素top设为50%，只能将元素的左顶点置于父元素的垂直中央。但由于元素自身存在宽度和高度，为了使元素整体在父元素中垂直居中，需要对元素自身进行移动。
 
-``` 
+```css 
 .parent {
     position: relative; 
 } 
@@ -236,7 +236,7 @@ comments: true
 
 * **方法二：margin-0 auto**
 
-``` 
+```css 
 .parent {
     position: relative;
 }
@@ -258,7 +258,7 @@ comments: true
 
 基本思路: 结合子元素外边距 auto 及四个方向的偏移值为0达到水平垂直居中的目的。
 
-```
+```css
 .parent {
     position: relative;
 }
@@ -284,7 +284,7 @@ comments: true
 
 #### 负边距居中
 
-```
+```css
 .parent {
     position: relative;
 }
@@ -304,7 +304,7 @@ comments: true
 
 #### transform定位
 
-```
+```css
 .parent {
     position: relative;
 }
@@ -323,7 +323,7 @@ comments: true
 
 设置父元素为的 display 为 flex，这是 CSS 布局未来的趋势。Flexbox 是 CSS3 新增属性，设计初衷是为了解决像垂直居中这样的常见布局问题。
 
-```
+```css
 .parent {
     display: flex;
     justify-content: center;
@@ -337,7 +337,7 @@ comments: true
 
 将父元素的 display 设置为 tabele-cell，居中的子元素设置为 inline-block.
 
-```
+```css
 .parent {
     display: table-cell;
     vertical-align: middle;
@@ -357,7 +357,7 @@ comments: true
 
 #### 文本内容居中
 
-```
+```css
 .parent {
     text-align: center;
 }

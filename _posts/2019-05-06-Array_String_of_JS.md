@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "JS的数组与字符串的操作方法总结"
+title:  "JS中数组与字符串的操作方法总结"
 date:   2019-05-06 09:21:02
-categories: [JS知识点]
-tags: [javascript]
+categories: [JavaScript]
+tags: [JavaScript]
 comments: true
 ---
 

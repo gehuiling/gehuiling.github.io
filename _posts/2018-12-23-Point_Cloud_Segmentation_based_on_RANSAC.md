@@ -2,8 +2,8 @@
 layout: post
 title:  "基于PCL的三维激光点云平面分割"
 date:   2018-12-23 12:33:09
-categories: [点云处理]
-tags: [PCL,C++,点云分割]
+categories: [Technical Sharon]
+tags: [PCL,点云分割]
 comments: true
 # photos: 
 #     - "/image/posts/Next.jpg"
@@ -55,7 +55,7 @@ CloudCompare是一款三维点云处理软件(例如那些用激光扫描仪获�
 
 关键代码如下：
 
-```
+```c++
 #include <iostream>           // 标准C++库中的输入输出类相关头文件。
 #include <pcl/io/pcd_io.h>      // pcd 读写类相关的头文件。
 #include <pcl/point_types.h>    // PCL中支持的点类型头文件。
@@ -70,7 +70,7 @@ pcl::io::loadPCDFile("indoor.pcd", *cloud);   //填入点云数据
 
 PCL中点云滤波模块提供了很多灵活实用的滤波处理算法，例如：双边滤波、高斯滤波、条件滤波、直通滤波、基于随机采样一致性滤波等。本实验采用VoxelGrid滤波器对点云进行下采样，该方法使用体素化网格方法实现下采样，即减少点的数量，并同时保存点云的形状特征，在分割，曲面重建，形状识别等算法速度中非常实用。VoxelGrid类通过输入的点云数据创建一个三维体素栅格，容纳后每个体素内用体素中所有点的重心来近似显示体素中其他点，这样该体素内所有点都用一个重心点最终表示，对于所有体素处理后得到的过滤后的点云，这种方法比用体素中心逼近的方法更慢，但是对于采样点对应曲面的表示更为准确。
 
-```
+```c++
 pcl::VoxelGrid<pcl::PCLPointCloud2> sor;  //创建滤波对象
 sor.setInputCloud (cloud);                //设置需要过滤的点云给滤波对象
 sor.setLeafSize (0.06f, 0.06f, 0.06f);    //设置滤波时创建的体素体积为1cm的立方体
@@ -102,7 +102,7 @@ sor.filter (*cloud_filtered);             //执行滤波处理，存储输出
 
 关键代码如下：
 
-```
+```c++
 pcl::ModelCoefficients::Ptr coefficients(new pcl::ModelCoefficients()); //存储输出的模型系数
 pcl::PointIndices::Ptr inliers(new pcl::PointIndices());//存储内点
 pcl::SACSegmentation<pcl::PointXYZ>  seg; //创建分割对象

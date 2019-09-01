@@ -2,8 +2,8 @@
 layout: post
 title:  "JS数据类型"
 date:   2019-03-27 22:08:03
-categories: [JS知识点]
-tags: [javascript]
+categories: [JavaScript]
+tags: [JavaScript]
 comments: true
 ---
 基本类型：Number、String、Boolean、Null、Udefined；引用类型：Object、Function、Array、Data等。关于基本类型和引用类型，除了这些，你还要知道的:
@@ -35,7 +35,7 @@ comments: true
 |    浅拷贝  |   否    | 改变不会使原数据一同改变 | 改变会使原数据一同改变 |
 |    深拷贝  |   否    |  改变不会使原数据一同改变| 改变不会使原数据一同改变 |
 
-```
+```javascript
 var obj = {
     name:'gege',
     age:'18',
@@ -86,7 +86,7 @@ console.log(clone2_obj);
 
 数组常用的浅拷贝方法：`slice`，`concat`，`Array.from()` ，以及`es6的析构`。
 
-```
+```javascript
 var arr1 = [1, 2,{a:1,b:2,c:3,d:4}];
 var arr2 = arr1.slice();
 var arr3 = arr1.concat();
@@ -107,7 +107,7 @@ arr5[2].d=5;
 // arr5[5,2,{a:2,b:3,c:4,d:5}]
 ```
 对象常用的浅拷贝方法`Object.assign()`，`es6析构`
-```
+```javascript
 var obj1 = {
     x: 1, 
     y: {
@@ -127,7 +127,7 @@ console.log(obj2) //{x: 2, y: {m: 2}}
 
 `JSON.parse(JSON.stringify(obj))`我们一般用来深拷贝，其过程说白了 就是利用JSON.stringify 将js对象序列化（JSON字符串），再使用JSON.parse来反序列化(还原)js对象。
 
-```
+```javascript
 var arr = ['old', 1, true, ['old1', 'old2'], {old: 1}]
 var new_arr = JSON.parse( JSON.stringify(arr) );
 new_arr[4].old=4;
@@ -138,7 +138,7 @@ console.log(new_arr); //['old', 1, true, ['old1', 'old2'], {old: 4}]
 但是要注意[“JSON.parse(JSON.stringify(obj))实现深拷贝应该注意的坑”](https://www.imooc.com/article/70653)，在平时的开发中JSON.parse(JSON.stringify(obj))已经满足90%的使用场景了。
 
 **实现一个深拷贝：**
-```
+```javascript
 var deepCopy = function(obj) {
     if (typeof obj !== 'object') return;
     var newObj = obj instanceof Array ? [] : {};
@@ -156,7 +156,7 @@ var deepCopy = function(obj) {
 所有的函数参数都是按值传递。也就是说把函数外面的值赋值给函数内部的参数，就和把一个值从一个变量赋值给另一个一样。
 
 * 基本类型
-```
+```javascript
 var a = 2;
 function add(x) {
  return x = x + 2;
@@ -165,7 +165,7 @@ var result = add(a);
 console.log(a, result); // 2 4
 ```
 * 引用类型
-```
+```javascript
 function setName(obj) {
   obj.name = 'laowang';
   obj = new Object();
@@ -182,7 +182,7 @@ console.log(person.name); //laowang
 
 **特别注意`typeof null:object`, `null instanceof Object:true`**
 
-```
+```javascript
 console.log(typeof "abcdef"); // string
 console.log(typeof 8);        // number
 console.log(typeof true);     // bollean
