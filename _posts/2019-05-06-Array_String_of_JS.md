@@ -7,6 +7,8 @@ tags: [javascript]
 comments: true
 ---
 
+<!--more-->
+
 ## 数组
 
 #### 不改变原数组
