@@ -4,10 +4,10 @@
 # ---------------------------------------------------------------
 
 # Site
-title: 葛慧玲的博客
-subtitle: Gehuiling's Blog
-description: 还是再稍微练习下自然笑的方法比较好喔。 #Obsess over every pixel.
-author: 葛慧玲
+title: gerger_blog
+subtitle: gerger's blog
+description: ten-cent store  #Obsess over every pixel.
+author: gerger
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: zh-Hans
 date_format: '%Y-%m-%d'
