@@ -7,7 +7,7 @@
     .post-title, .post-meta {
       display: block;
       width: auto;
-      text-align: left;
+      text-align: center!important;
     }
   }
 }
@@ -78,16 +78,23 @@
   }
 
   .post-header:hover {
-    border-bottom-color: $grey-dim;
+    // border-bottom-color: $grey-dim;
+    border-bottom-color:#00a7e0;
 
-    &::before { background: $black-deep; }
+
+    &::before {
+      //  background: $black-deep;
+      background: #00a7e0;
+    }
   }
 
   .post-meta {
     position: absolute;
     font-size: 12px;
-    left: 20px;
+    left: 10px;
     top: 5px;
+    color:#00a7e0;
+    text-align: center!important;
   }
 
   .post-comments-count { display: none; }
@@ -95,8 +102,10 @@
   .post-title {
     margin-left: 60px;
     font-size: 16px;
-    font-weight: normal;
+    // font-weight: normal;
+    font-weight: 700;
     line-height: inherit;
+    text-align: center!important;
 
     &::after {
       margin-left: 3px;

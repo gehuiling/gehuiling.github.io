@@ -10,6 +10,7 @@ html, body { height: 100%; }
 .container {
   position: relative;
   min-height: 100%;
+  background: #CCCCCC;
 }
 
 
@@ -30,7 +31,8 @@ html, body { height: 100%; }
 .main { padding-bottom: $footer-height + $gap-between-main-and-footer; }
 .main-inner {
   margin: 0 auto;
-  width: $content-desktop;
+  // width: $content-desktop;
+  width:860px;
 
   @include desktop-large() {
     .container & { width: $content-desktop-large; }

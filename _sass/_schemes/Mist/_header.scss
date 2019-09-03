@@ -1,8 +1,11 @@
 // Header
 // --------------------------------------------------
-.header { background: $whitesmoke; }
+.header {
+  //  background: $whitesmoke;
+  background:  rgba(40,42,44,.6);
+  }
 .header-inner {
-  padding: 25px 0 20px;
+  padding: 10px 0 10px;
   @include clearfix();
 
   @include mobile() {
@@ -11,6 +14,8 @@
     padding: 10px;
   }
 }
+
+.menu .menu-item a {color:#fff;padding:0 20px!important;}
 
 .site-meta {
   float: left;
@@ -33,6 +38,7 @@
   .site-title {
     font-size: 22px;
     font-weight: bolder;
+    color:#fff;
 
     @include mobile() { line-height: 34px; }
   }
@@ -44,15 +50,17 @@
   display: block;
   overflow: hidden;
   margin: 0 auto;
-  width: 75%;
+  width: 100%;
 
   @include mobile() { display: none; }
 
   i {
+
     position: relative;
     display: block;
     height: 2px;
-    background: $black-deep;
+    // background: $black-deep;
+    background: #fff;
     @include mobile() { height: 3px; }
   }
 }

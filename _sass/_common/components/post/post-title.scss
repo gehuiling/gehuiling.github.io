@@ -1,8 +1,9 @@
 .posts-expand .post-title {
   font-size: 26px;
-  text-align: center;
+  text-align: center!important;
   word-break: break-word;
-  font-weight: $posts-expand-title-font-weight;
+  // font-weight: $posts-expand-title-font-weight;
+  font-weight: 700;
 
   @include mobile() {
     font-size: 22px;
@@ -11,10 +12,13 @@
 .posts-expand .post-title-link {
   display: inline-block;
   position: relative;
-  color: $black-light;
+  color:#444;
+  // color: $black-light;
   border-bottom: none;
   line-height: 1.2;
   vertical-align: top;
+  font-weight: 700;
+  text-align: center;
 
   &::before {
     content: "";

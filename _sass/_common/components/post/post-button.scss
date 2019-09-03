@@ -1,19 +1,26 @@
 .post-button {
   margin-top: 50px;
+  text-align: center;
 
   .btn {
-    color: $read-more-color;
+    // color: $read-more-color;
+    color:#fff;
     font-size: $read-more-font-size;
-    background: $read-more-bg-color;
+    // background: $read-more-bg-color;
+    background: #97dffd;
+    padding: 1px 15px;
     border-radius: $read-more-border-radius;
     line-height: 2;
     margin: 0 4px 8px 4px;
+    border-radius: 5px;
+
   }
   .btn:hover {
-    @extend %btn-hover;
+    // @extend %btn-hover;
+    background: #D3D3D3;
   }
   .fa-fw {
     width: (18em / 14);
-    text-align: left;
+    // text-align: left;
   }
 }

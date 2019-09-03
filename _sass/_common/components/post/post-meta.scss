@@ -3,7 +3,7 @@
   color: $grey-dark;
   font-family: $font-family-posts;
   font-size: 12px;
-  text-align: center;
+  text-align: center!important;
 
   .post-category-list {
     display: inline-block;
@@ -16,6 +16,16 @@
     font-size: 14px;
     margin-top: 2px;
   }
+  .post-time time {
+    color: #9ACD32;
+
+  }
+  span.post-category a {
+    color: #FFB90F	;
+}
+  .leancloud_visitors {
+    color: #FF6A6A;
+}
 }
 
 .post-wordcount {
