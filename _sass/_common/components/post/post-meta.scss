@@ -3,29 +3,30 @@
   color: $grey-dark;
   font-family: $font-family-posts;
   font-size: 12px;
-  text-align: center!important;
+  text-align: center !important;
 
   .post-category-list {
     display: inline-block;
     margin: 0;
     padding: 3px;
   }
-  .post-category-list-link { color: $grey-dark; }
+  .post-category-list-link {
+    color: $grey-dark;
+  }
 
   .post-description {
     font-size: 14px;
     margin-top: 2px;
   }
   .post-time time {
-    color: #9ACD32;
-
+    color: #9acd32;
   }
   span.post-category a {
-    color: #FFB90F	;
-}
-  .leancloud_visitors {
-    color: #FF6A6A;
-}
+    color: #ffb90f;
+  }
+  .leancloud_visitors span:nth-child(4),.leancloud_visitors span:nth-child(5) {
+    color: #ff6a6a!important;
+  }
 }
 
 .post-wordcount {
@@ -33,7 +34,7 @@
 }
 
 .post-meta-divider {
-  margin: 0 .5em;
+  margin: 0 0.5em;
 }
 
 .post-meta-item-icon {
@@ -55,5 +56,7 @@
 }
 
 .posts-expand .post-comments-count {
-  @include mobile() { display: none; }
+  @include mobile() {
+    display: none;
+  }
 }
