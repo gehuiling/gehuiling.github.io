@@ -149,7 +149,7 @@ menu_icons:
 # ---------------------------------------------------------------
 # Scheme Settings
 # ---------------------------------------------------------------
-
+# 博客风格
 # Schemes
 # scheme: Muse
 scheme: Mist
@@ -251,7 +251,7 @@ toc:
   number: true
 
   # If true, all words will placed on next lines if header width longer then sidebar width.
-  wrap: false
+  wrap: true
 
 
 # Creative Commons 4.0 International License.
@@ -271,7 +271,8 @@ sidebar:
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggle.
-  display: always
+  # 右侧栏
+  display: hide
   #display: always
   #display: hide
   #display: remove
