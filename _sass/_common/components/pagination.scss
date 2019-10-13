@@ -1,7 +1,7 @@
 .pagination {
-  margin: 120px 0 40px;
+  margin: 30px 0;
   text-align: center;
-  border-top: 1px solid $pagination-border;
+  // border-top: 1px solid $pagination-border;
 }
 
 .page-number-basic {
@@ -19,9 +19,11 @@
   .prev, .next, .page-number {
     @extend .page-number-basic;
     border-bottom: 0;
-    border-top: 1px solid $pagination-link-border;
+    // border-top: 1px solid $pagination-link-border;
     transition-property: border-color;
     @include the-transition();
+
+    border: 1px solid;
 
     &:hover { border-top-color: $pagination-link-hover-border; }
   }
@@ -38,7 +40,7 @@
   @at-root %page-number-current {
     color: $pagination-active-color;
     background: $pagination-active-bg;
-    border-top-color: $pagination-active-border;
+    // border-top-color: $pagination-active-border;
   }
 
   .page-number.current {
@@ -53,7 +55,7 @@
     .prev, .next, .page-number {
       margin-bottom: 10px;
       border-top: 0;
-      border-bottom: 1px solid $pagination-link-border;
+      // border-bottom: 1px solid $pagination-link-border;
 
       &:hover { border-bottom-color: $pagination-link-hover-border; }
     }

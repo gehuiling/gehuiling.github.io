@@ -60,8 +60,8 @@
 // Pagination
 // --------------------------------------------------
 .pagination {
-  margin: 120px 0 0;
-  text-align: left;
+  margin: 30px 0 0;
+  text-align: center;
 
   @include mobile() {
     margin: 80px 10px 0;
@@ -74,12 +74,14 @@
 .footer {
   margin-top: 80px;
   padding: 10px 0;
-  background: $whitesmoke;
-  color: $grey-dim;
+  // background: $whitesmoke;
+  background: rgba(40, 42, 44, 0.6);
+  color: #fff;
+  // color: $grey-dim;
 }
 .footer-inner {
   margin: 0 auto;
-  text-align: left;
+  text-align: center;
 
   @include mobile() {
     width: auto;
