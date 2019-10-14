@@ -23,9 +23,13 @@
     transition-property: border-color;
     @include the-transition();
 
-    border: 1px solid;
+    border: 1px solid #228B22;
 
-    &:hover { border-top-color: $pagination-link-hover-border; }
+    &:hover {
+      // border-top-color: $pagination-link-hover-border; 
+
+
+    }
   }
 
   .space {
@@ -38,8 +42,10 @@
   .next { margin-right: 0; }
 
   @at-root %page-number-current {
-    color: $pagination-active-color;
-    background: $pagination-active-bg;
+    // color: $pagination-active-color;
+    // background: $pagination-active-bg;
+    color: #fff;
+    background: #228B22;
     // border-top-color: $pagination-active-border;
   }
 

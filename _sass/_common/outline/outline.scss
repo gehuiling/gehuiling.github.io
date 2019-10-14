@@ -12,7 +12,7 @@ body {
 .container {
   position: relative;
   min-height: 100%;
-  background: #cccccc;
+  // background: #cccccc;
 }
 
 // Header Section
@@ -48,6 +48,7 @@ body {
 
 .page-post-detail .main-inner {
   background: white;
+  border-radius: 10px;
 }
 
 // Footer Section
