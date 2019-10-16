@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "HTTP、HTTP2、HTTPS"
+title:  "😂 HTTP、HTTP2、HTTPS"
 date:   2019-05-12 11:31:00
 categories: [计算机网络]
 tags: [HTTP,HTTP2,HPPTS]
 comments: true
 ---
 
-HTTP(Hyper Text Transfer Protocol)，是用于从万维网(WWWW：World Wide Web)服务器传输超文本到本地浏览器的传输协议。HTTP基于TCP/IP通信协议来传递数据。
+`HTTP(Hyper Text Transfer Protocol)`，是用于从万维网(`WWWW：World Wide Web`)服务器传输超文本到本地浏览器的传输协议。HTTP基于TCP/IP通信协议来传递数据。
 <!--more-->
 
 - HTTP 是无连接的：每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。

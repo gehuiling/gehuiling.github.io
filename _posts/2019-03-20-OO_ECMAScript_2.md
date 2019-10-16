@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ECMAScript面向对象编程（二）继承(ES6之前)"
+title:  "🎅🏻 ECMAScript面向对象编程（二）继承(ES6之前)"
 date:   2019-03-20 18:05:12
 categories: [JavaScript]
 tags: [JavaScript]

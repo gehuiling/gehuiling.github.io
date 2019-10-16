@@ -21,11 +21,13 @@
     display: block;
     line-height: 25px;
     font-size: 14px;
-    color: $link-color;
+    // color: $link-color;
+    color:#32CD32;
     border-bottom: none;
 
     &:hover {
-      color: $link-hover-color;
+      // color: $link-hover-color;
+      color:#228B22;
       border-bottom: none;
     }
 

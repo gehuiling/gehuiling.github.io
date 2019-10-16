@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "轨迹点查询与可视化"
+title: "👩🏻‍🔧 轨迹点时空查询与可视化"
 date: 2019-06-10 00:00:00
-categories: [GIS]
+categories: [可视化]
 tags: [leaflet,knn]
 comments: true
 ---
@@ -19,4 +19,4 @@ Ajax请求后台数据接口，根据设定的时间范围，框选（或手动�
 根据设定的KNN邻近查询参数k值，鼠标点击地图任何地方，Ajax请求后台数据接口，返回鼠标单击处的所有邻近轨迹点，直接渲染在地图上
 <img src="/image/posts/blog1702.gif" style="display:block;margin:0 auto;"> 
 
-**[代码github](https://github.com/gehuiling/point-query-visualization)**
+👩🏻‍💻🥱✨🧐**[代码](https://github.com/gehuiling/point-query-visualization)**

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "JS数据类型"
+title:  "👶🏻 JS数据类型"
 date:   2019-03-27 22:08:03
 categories: [JavaScript]
 tags: [JavaScript]

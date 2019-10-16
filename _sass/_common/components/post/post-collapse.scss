@@ -33,7 +33,7 @@
 
   .collection-title {
     position: relative;
-    margin: 60px 0;
+    margin: 20px 0;
 
     h1, h2 { margin-left: 20px; }
 
@@ -79,12 +79,11 @@
 
   .post-header:hover {
     // border-bottom-color: $grey-dim;
-    border-bottom-color:#00a7e0;
-
+    border-bottom-color:#1E90FF;
 
     &::before {
       //  background: $black-deep;
-      background: #00a7e0;
+      background: #1E90FF;
     }
   }
 
@@ -93,7 +92,7 @@
     font-size: 12px;
     left: 10px;
     top: 5px;
-    color:#00a7e0;
+    // color:#1E90FF;
     text-align: center!important;
   }
 
