@@ -2,8 +2,8 @@
 layout: post
 title: "🥯 Nodejs_echartsGL_geoVis"
 date: 2019-08-11 00:00:00
-categories: [Node]
-tags: [Node]
+categories: [Node.js]
+tags: [Node.js]
 comments: true
 ---
 

@@ -2,8 +2,8 @@
 layout: post
 title: "🤖 React实战Demo：Leaflet地图框架"
 date: 2019-06-17 00:00:00
-categories: [React]
-tags: [react,leaflet]
+categories: [React,可视化]
+tags: [react,leaflet,可视化]
 comments: true
 ---
 

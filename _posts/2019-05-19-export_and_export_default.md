@@ -2,8 +2,8 @@
 layout: post
 title: " 😀 export 和 export default"
 date: 2019-05-19 00:00:00
-categories: [ES6]
-tags: [export, export default]
+categories: [ES6,JavaScript]
+tags: [JavaScript]
 comments: true
 ---
 
