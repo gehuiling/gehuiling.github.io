@@ -7,7 +7,7 @@ tags: [Node.js]
 comments: true
 ---
 
-<img src="/image/posts/blog1901.gif" style="display:block;margin:0 auto;"> 
+<img src="/image/posts/blog1902.bmp" style="display:block;margin:0 auto;"> 
 
 <!--more-->
 
@@ -134,5 +134,7 @@ $.ajax({
     }
 });
 ```
+实验效果：
+<img src="/image/posts/blog1901.gif" style="display:block;margin:0 auto;"> 
 
 😀👩🏻‍💻👩🏻‍🔧😅   **[ 源码](https://github.com/gehuiling/nodejs_echartsGL)**
