@@ -23,11 +23,12 @@
     transition-property: border-color;
     @include the-transition();
 
-    border: 1px solid #228B22;
+    border: 0.5px solid #EEEE00;
+    color: #fff;
 
     &:hover {
       // border-top-color: $pagination-link-hover-border; 
-
+      color: 	#EEEE00;
 
     }
   }
@@ -45,7 +46,7 @@
     // color: $pagination-active-color;
     // background: $pagination-active-bg;
     color: #fff;
-    background: #228B22;
+    background: #BFBFBF;
     // border-top-color: $pagination-active-border;
   }
 
