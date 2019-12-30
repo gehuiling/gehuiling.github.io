@@ -5,8 +5,9 @@ date: 2019-09-13 00:00:00
 categories: [JavaScript]
 tags: [JavaScript]
 comments: true
-
 ---
+
+在前端开发的过程中，我们经常会需要绑定一些持续触发的事件，如 resize、scroll、mousemove 等，但有些时候我们并不希望在事件持续触发的过程中那么频繁地去执行函数。通常这种情况下我们怎么去解决的呢？一般来讲，防抖和节流是比较好的解决方案。
 
 <!--more-->
 
