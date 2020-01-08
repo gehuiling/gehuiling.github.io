@@ -120,7 +120,7 @@ menu:
   home: /
   archives: /archives/
   categories: /categories/
-  tags: /tags/
+  # tags: /tags/
   about: /about/
   #sitemap: /sitemap.xml
   #commonweal: /404.html
@@ -272,8 +272,7 @@ sidebar:
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggle.
   # 右侧栏
-  display: hide
-  #display: always
+  display: always
   #display: hide
   #display: remove
 
@@ -759,5 +758,5 @@ alipay: /image/reward/alipay-reward-image.jpg
 
 # 分页
 plugins: [jekyll-paginate]
-paginate: 5
+paginate: 8
 paginate_path: "geBlog/page:num"

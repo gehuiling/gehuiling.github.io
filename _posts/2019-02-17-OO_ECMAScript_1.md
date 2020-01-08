@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "👼🏻 ECMAScript面向对象编程（一）创建对象(ES6之前)"
+title:  "🤹🏻‍♀️ ECMAScript面向对象编程（一）创建对象(ES6之前)"
 date:   2019-02-17 21:15:02
 categories: [JavaScript]
 tags: [JavaScript]
