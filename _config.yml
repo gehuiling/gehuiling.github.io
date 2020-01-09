@@ -120,7 +120,7 @@ menu:
   home: /
   archives: /archives/
   categories: /categories/
-  # tags: /tags/
+  tags: /tags/
   about: /about/
   #sitemap: /sitemap.xml
   #commonweal: /404.html
@@ -216,8 +216,8 @@ font:
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
   GitHub: https://github.com/gehuiling
-  掘金: https://juejin.im/user/5c36d18b6fb9a049ff4e52aa
-  SegmentFault: https://segmentfault.com/u/sleepygee
+  # 掘金: https://juejin.im/user/5c36d18b6fb9a049ff4e52aa
+  # SegmentFault: https://segmentfault.com/u/sleepygee
   #Email: geehuiling@outlook.com
 
 
@@ -369,7 +369,7 @@ highlight_theme: normal
 
 # MathJax Support
 mathjax:
-  enable: false
+  enable: true
   per_page: false
   cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
@@ -615,28 +615,28 @@ exturl: false
 # Motion
 use_motion: true
 
-# Fancybox
-fancybox: true
+# Fancybox  图片预览
+fancybox: false
 
 # Progress bar in the top during page loading.
 pace: true
 # Themes list:
-#pace-theme-big-counter
-#pace-theme-bounce
-#pace-theme-barber-shop
-#pace-theme-center-atom
+#pace-theme-big-counter  ## 很大的%数字
+#pace-theme-bounce     ## 弹跳的球
+#pace-theme-barber-shop   ## 斜杠
+#pace-theme-center-atom   ## react符号
 #pace-theme-center-circle
-#pace-theme-center-radar
-#pace-theme-center-simple
+# pace-theme-center-radar  ## 圆雷达
+#pace-theme-center-simple    ##
 #pace-theme-corner-indicator
 #pace-theme-fill-left
 #pace-theme-
-#pace-theme-loading-bar
+#pace-theme-loading-bar   ## 带%进度条
 #pace-theme-mac-osx
 #pace-theme-minimal
-# For example
-# pace_theme: pace-theme-center-simple
-pace_theme: pace-theme-minimal
+# For example 
+pace_theme: pace-theme-center-atom 
+# pace_theme: pace-theme-minimal
 
 # Canvas-nest
 canvas_nest: false
