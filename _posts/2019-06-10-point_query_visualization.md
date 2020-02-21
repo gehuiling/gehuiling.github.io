@@ -8,8 +8,10 @@ comments: true
 ---
 
 基于leaflet的轨迹点聚合渲染，knn邻近查询结果可视化
-<img src="/image/posts/blog1703.bmp" style="display:block;margin:0 auto;"> 
+<img src="/image/posts/blog1704.png" style="display:block;margin:0 auto;"> 
+
 <!--more-->
+<img src="/image/posts/blog1705.bmp" style="display:block;margin:0 auto;">
 
 ### 轨迹点时空查询、聚合渲染
 Ajax请求后台数据接口，根据设定的时间范围，框选（或手动设置）的空间范围，请求到时空范围内的轨迹点；基于leaflet的markercluster插件，实现大数据量轨迹点快速渲染。
