@@ -13,6 +13,9 @@ React中的受控组件和非受控组件的区别。
 
 ### The Uncontrolled
 
+非受控组件
 
 ### The Controlled
+
+受控组件
 
