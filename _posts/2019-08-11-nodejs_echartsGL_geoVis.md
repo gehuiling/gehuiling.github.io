@@ -7,9 +7,9 @@ tags: [Node.js]
 comments: true
 ---
 
-<img src="/image/posts/blog1902.bmp" style="display:block;margin:0 auto;"> 
-
 <!--more-->
+
+<img src="/image/posts/blog1902.bmp" style="display:block;margin:0 auto;"> 
 
 ### 使用express搭建服务器
 

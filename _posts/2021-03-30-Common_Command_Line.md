@@ -19,6 +19,8 @@ git
 ```
 ### Linux常用命令
 
+[参考](https://www.cnblogs.com/huchong/tag/%E6%AF%8F%E5%A4%A9%E5%AD%A6%E4%B9%A0%E4%B8%80%E4%B8%AAlinux%E5%91%BD%E4%BB%A4/)
+
 #### echo
 
 [详细说明](https://www.runoob.com/linux/linux-shell-echo.html)
@@ -189,7 +191,7 @@ rm -r ${dirname}    # 删除目录 dirname及里面的文件
 rm -rf ${dirname}   # 【!!!慎重使用】删除目录以及目录里的东西
 ```
 
-#### 修改权限 
+#### 修改权限 `chmod`
 
 [Linux chmod命令](https://www.runoob.com/linux/linux-comm-chmod.html)
 
@@ -223,5 +225,69 @@ vim test.txt   # 进入 vi 的一般模式。vim 后面一定要加文件名，�
 ```shell
 
 touch ${filename}  #修改文件时间属性为当前系统时间,若filename文件不存在，则会建立一个新的空白文件filename
+
+```
+
+
+#### 查找文件 `find/locate/which/whereis`
+
+> `find`: 实际搜寻硬盘查询文件名称<br />
+> `locate`: 配合数据库查看文件位置<br />
+> `which`: 查看可执行文件的位置<br />
+> `whereis`: 查看文件的位置
+
++ `find`
+
+[详细教程](https://www.cnblogs.com/jiftle/p/9707518.html)
+```shell
+
+# 查找文件
+find . -name "*.sh"  # 查找当前目录（包括子目录）下所有所有.sh 文件
+
+#查找目录
+find . -name 'tes*' -type d # 查找当前目录（包括子目录）下所有包含tes名称前缀的文件夹（显示目标文件夹的路径，如：./testDir1、./testDir、./testDir/testchildren）
+
+find /home -name "*.txt" # 在/home目录下查找以.txt结尾的文件名
+
+find /home -iname "*.txt" # 同上，但忽略大小写
+
+```
+
++ `locate`
+
+locate 命令无需指定路径，直接搜索，locate 的搜索速度远快于 find 命令。locate不是直接去系统的各个角落搜索文件，而是在一个叫 mlocate.db 的数据库下搜索。locate 命令在找到文件之后，将直接显示该文件的绝对路径。**locate 命令有个弊端，它无法搜索当天所创建的文件**，因为它的数据库一天只在早上更新一次。
+```shell
+
+locate test1.sh # /home/gehuiling/Code/test2/test1.sh
+
+```
++ `which`
+
+[详细教程](https://www.cnblogs.com/huchong/p/9938426.html)
+which指令会在PATH变量指定的路径中，搜索某个系统命令的位置，并且返回第一个搜索结果。
+```shell
+
+which pwd     # /bin/pwd
+
+which java    # /usr/local/jdk1.8.0_271/bin/java
+
+which python  # /usr/bin/python
+
+```
+
++ `whereis`
+
+该指令会在特定目录中查找符合条件的文件。这些文件应属于原始代码、二进制文件，或是帮助文件。该指令只能用于查找二进制文件、源代码文件和man手册页，一般文件的定位需使用locate命令。
+搜索结果一般包括：二进制文件的路径、二进制文件的源码路径、对应 man 文件的路径
+```shell
+
+# 查看 bash 指令的位置
+whereis ls # bash: /bin/bash /etc/bash.bashrc /usr/share/man/man1/bash.1.gz
+
+# 显示bash 命令的二进制程序的地址
+whereis -b bash # bash: /bin/bash /etc/bash.bashrc
+
+# 显示bash命令的帮助文件地址
+whereis -m bash # bash: /usr/share/man/man1/bash.1.gz
 
 ```
