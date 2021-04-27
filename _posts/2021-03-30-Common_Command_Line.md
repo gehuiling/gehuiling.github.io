@@ -14,6 +14,10 @@ comments: true
 
 [git branch超棒教程！](https://learngitbranching.js.org/?locale=zh_CN)
 
+[Git Reset 三种模式](https://www.jianshu.com/p/c2ec5f06cf1a)
+
+<img src="/image/posts/20210427.png" style="display:block;margin:0 auto;">
+
 `master` 引用通常指向主分支的最新依次提交
 
 `HEAD` 该分支上的最后一次提交的快照
@@ -72,6 +76,15 @@ git revert HEAD # 【退回到上一个提交】创建一个新的提交来抵�
 git push origin :foo # 如果 push 空 到远程仓库会如何呢？它会删除远程仓库中的分支
 
 git fetch origin :bar # 如果 fetch 空 到本地，会在本地创建一个新分支bar
+
+git reset HEAD ${file} # 将暂存区的文件变成 unstage
+
+git reset --hard HEAD^ # 完全回退到HEAD^，暂存区以及修改了但没有暂存的都会被清除掉（当然untrack文件是不影响的，因为其没有被git跟踪）【 HEAD 和当前 branch 切到上一条commit 的同时，除untrack之外，其他改动一起全都消失】
+
+git reset --soft HEAD^ # 保留工作目录和暂存区中的内容，并把重置 HEAD 所带来的新的差异放进暂存区
+
+git reset # 如果不加参数，就是默认使用--mixed,工作目录的修改、暂存区的内容以及由 reset 所导致的新的文件差异，都会被放进工作目录【把暂存区清空,并把原节点和reset节点的差异的文件放在工作目录】
+
 ```
 ### Linux常用命令
 
